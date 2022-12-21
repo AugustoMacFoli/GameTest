@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.floor = new System.Windows.Forms.Panel();
-            this.player = new System.Windows.Forms.Panel();
+            this.playerControl = new System.Windows.Forms.Panel();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.labelShootCount = new System.Windows.Forms.Label();
             this.labelActiveBulletCount = new System.Windows.Forms.Label();
@@ -46,13 +46,13 @@
             this.floor.Size = new System.Drawing.Size(803, 39);
             this.floor.TabIndex = 0;
             // 
-            // player
+            // playerControl
             // 
-            this.player.BackColor = System.Drawing.Color.MediumBlue;
-            this.player.Location = new System.Drawing.Point(102, 320);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(48, 91);
-            this.player.TabIndex = 1;
+            this.playerControl.BackColor = System.Drawing.Color.MediumBlue;
+            this.playerControl.Location = new System.Drawing.Point(102, 320);
+            this.playerControl.Name = "playerControl";
+            this.playerControl.Size = new System.Drawing.Size(48, 91);
+            this.playerControl.TabIndex = 1;
             // 
             // gameTimer
             // 
@@ -104,7 +104,7 @@
             this.Controls.Add(this.labelShootCountValue);
             this.Controls.Add(this.labelActiveBulletCount);
             this.Controls.Add(this.labelShootCount);
-            this.Controls.Add(this.player);
+            this.Controls.Add(this.playerControl);
             this.Controls.Add(this.floor);
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -120,7 +120,7 @@
         #endregion
 
         private Panel floor;
-        private Panel player;
+        private Panel playerControl;
         private System.Windows.Forms.Timer gameTimer;
         private Label labelShootCount;
         private Label labelActiveBulletCount;
