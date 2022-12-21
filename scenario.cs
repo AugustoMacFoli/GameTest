@@ -33,12 +33,18 @@ namespace GameTest
 
         private void moveLeft()
         {
-            playerControl.Left -= player.playerHorizontalSpeed;
+            if (playerControl.Bounds.Left - player.playerHorizontalSpeed >= floor.Bounds.Left)
+            {
+                playerControl.Left -= player.playerHorizontalSpeed;
+            }
         }
 
         private void moveRight()
         {
-            playerControl.Left += player.playerHorizontalSpeed;
+            if (playerControl.Bounds.Right + player.playerHorizontalSpeed <= floor.Bounds.Right)
+            {
+                playerControl.Left += player.playerHorizontalSpeed;
+            }
         }
 
         private void jump()
